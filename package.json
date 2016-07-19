@@ -1,0 +1,31 @@
+{
+  "name": "assert-exists",
+  "version": "0.0.1",
+  "description": "A small package for consistently asserting if a value exists",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint -s && test-cover",
+    "lint": "eslint $(git ls-files | grep '.js$')",
+    "test-cover": "istanbul cover --report html --print detail -- test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghmeier/assert-exists.git"
+  },
+  "keywords": [
+    "assert",
+    "exists",
+    "test",
+    "value"
+  ],
+  "author": "Garret Meier <meier.garret@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghmeier/assert-exists/issues"
+  },
+  "homepage": "https://github.com/ghmeier/assert-exists#readme",
+  "dependencies": {
+    "eslint": "^3.1.1",
+    "tape": "^4.6.0"
+  }
+}
