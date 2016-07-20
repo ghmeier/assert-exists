@@ -1,6 +1,4 @@
-# Assert Exists
-![Travis Build](https://travis-ci.org/ghmeier/assert-exists.svg?branch=master)
----
+# Assert Exists ![Travis Build](https://travis-ci.org/ghmeier/assert-exists.svg?branch=master)
 A package for consistently asserting if a variable exists.
 
 # Usage
