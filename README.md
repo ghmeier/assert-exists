@@ -10,7 +10,7 @@ A package for consistently asserting if a variable exists.
 ```javascript
 var a = require("assert-exists");
 
-var errorMsg = a.existstError("MyPackage");
+var errorMsg = a.msg("MyPackage");
 
 function MyPackage(options) {
   a.exists(options, errorMsg('options'));
@@ -22,7 +22,7 @@ function MyPackage(options) {
 ---
 * `.exists(value, errorMessage, *type)`
   * Checks to see if value is not null, AND `typeof` type (if it's provided), otherwise throws `AssertionError: "errorMessage"`.
-* `.existsError(packageString)`
+* `.msg(packageString)`
   * Returns a function that takes one argument and returns a string like: 
 ```
 "ERROR: Expected {1} to be passed into {packageString}."
@@ -55,4 +55,4 @@ This sucks. So, I made the package to constrict my ability to mess this stuff up
 Now we have one function to check if it exists, and one to get an error message. Simple.
 
 ---
-`a.exists(finished, a.existsError('README')('finished'), 'bool');`
+`a.exists(finished, a.msg('README')('finished'), 'bool');`
