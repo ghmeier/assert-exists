@@ -1,6 +1,6 @@
 {
   "name": "assert-exists",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A small package for consistently asserting if a value exists",
   "main": "index.js",
   "scripts": {
