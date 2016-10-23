@@ -1,12 +1,11 @@
 {
   "name": "assert-exists",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small package for consistently asserting if a value exists",
   "main": "index.js",
   "scripts": {
-    "test": "xo && npm run test-cover",
-    "lint": "eslint $(git ls-files | grep '.js$')",
-    "test-cover": "istanbul cover --report html --print detail -- test.js"
+    "test": "xo && nyc ava -v",
+    "lint": "xo"
   },
   "repository": {
     "type": "git",
@@ -24,11 +23,13 @@
     "url": "https://github.com/ghmeier/assert-exists/issues"
   },
   "homepage": "https://github.com/ghmeier/assert-exists#readme",
-  "dependencies": {
-    "eslint": "1.8.0",
-    "eslint-config-perf-standard": "2.0.0",
-    "eslint-plugin-perf-standard": "1.0.2",
-    "istanbul": "^0.3.5",
-    "tape": "^4.6.0"
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "nyc": "^8.3.2",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

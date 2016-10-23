@@ -1,28 +1,24 @@
 'use strict';
 
-const tape = require('tape');
+const test = require('ava');
 const a = require('./index.js');
 
-tape('testing exists', assert => {
-	let message = a.msg('test');
+test('testing exists', t => {
+	const message = a.msg('test');
 	a.exists(1, message('num'));
-	assert.pass();
-	assert.end();
+	t.pass();
 });
 
-tape('testing type', assert => {
-	let msg = a.msg('test');
+test('testing type', t => {
+	const msg = a.msg('test');
 
 	a.exists('value', msg('string'), 'string');
-	assert.pass();
-	assert.end();
+	t.pass();
 });
 
-tape('testing type no value', assert => {
-	let msg = a.msg('test');
-	assert.throws(() => {
+test('testing type no value', t => {
+	const msg = a.msg('test');
+	t.throws(() => {
 		a.exists(null, msg('none'), 'string');
-	}, 'Assertion Error');
-
-	assert.end();
+	}, 'ERROR: Expected none to be passed into test.');
 });

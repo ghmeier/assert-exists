@@ -6,7 +6,7 @@ module.exports.exists = assertExists;
 module.exports.msg = existsMsg;
 
 function assertExists(value, err, type) {
-	var exists = value;
+	let exists = value;
 	if (type && typeof type === 'string') {
 		/* eslint-disable valid-typeof */
 		exists = value && typeof value === type;
