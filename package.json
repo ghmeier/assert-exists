@@ -7,6 +7,9 @@
     "test": "xo && nyc ava -v",
     "lint": "xo"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ghmeier/assert-exists.git"
