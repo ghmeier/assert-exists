@@ -1,10 +1,10 @@
 {
   "name": "assert-exists",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small package for consistently asserting if a value exists",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint -s && npm run test-cover",
+    "test": "xo && npm run test-cover",
     "lint": "eslint $(git ls-files | grep '.js$')",
     "test-cover": "istanbul cover --report html --print detail -- test.js"
   },

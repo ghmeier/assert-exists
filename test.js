@@ -1,29 +1,28 @@
 'use strict';
 
-var tape = require('tape');
-var a = require('./index.js');
+const tape = require('tape');
+const a = require('./index.js');
 
-tape('testing exists', function t(assert) {
-    var message = a.msg('test');
-    a.exists(1, message('num'));
-    assert.pass();
-    assert.end();
+tape('testing exists', assert => {
+	let message = a.msg('test');
+	a.exists(1, message('num'));
+	assert.pass();
+	assert.end();
 });
 
-tape('testing type', function t(assert) {
-    var msg = a.msg('test');
+tape('testing type', assert => {
+	let msg = a.msg('test');
 
-    a.exists('value', msg('string'), 'string');
-    assert.pass();
-    assert.end();
-
+	a.exists('value', msg('string'), 'string');
+	assert.pass();
+	assert.end();
 });
 
-tape('testing type no value', function t(assert) {
-    var msg = a.msg('test');
-    assert.throws(function tryThrows() {
-        a.exists(null, msg('none'), 'string');
-    }, 'Assertion Error');
+tape('testing type no value', assert => {
+	let msg = a.msg('test');
+	assert.throws(() => {
+		a.exists(null, msg('none'), 'string');
+	}, 'Assertion Error');
 
-    assert.end();
+	assert.end();
 });
