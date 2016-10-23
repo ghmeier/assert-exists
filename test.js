@@ -1,5 +1,3 @@
-'use strict';
-
 const test = require('ava');
 const a = require('./index.js');
 
